@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Number" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxN-eI-eKl">
+                                <rect key="frame" x="137.5" y="424" width="139" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Powerball"/>
+                                <connections>
+                                    <segue destination="JHp-1r-27o" kind="show" id="8eU-bg-yWI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rxN-eI-eKl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JwP-tQ-Elj"/>
+                            <constraint firstItem="rxN-eI-eKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WaP-tk-ubw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Powerball-->
+        <scene sceneID="K9q-PX-wQ6">
+            <objects>
+                <viewController storyboardIdentifier="Powerball" id="JHp-1r-27o" customClass="Powerball" customModule="Number" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Z3-eW-egX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zO-BI-Ifd">
+                                <rect key="frame" x="184.5" y="406" width="45.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-Ln-ewx">
+                                <rect key="frame" x="148" y="489" width="119" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Once more"/>
+                                <connections>
+                                    <action selector="generateAgain:" destination="JHp-1r-27o" eventType="touchUpInside" id="FCx-gK-AfE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8zO-BI-Ifd" firstAttribute="centerX" secondItem="4Z3-eW-egX" secondAttribute="centerX" id="8ev-aV-7eA"/>
+                            <constraint firstItem="gkG-Ln-ewx" firstAttribute="centerX" secondItem="4Z3-eW-egX" secondAttribute="centerX" id="J9i-UT-tyh"/>
+                            <constraint firstItem="8zO-BI-Ifd" firstAttribute="centerY" secondItem="4Z3-eW-egX" secondAttribute="centerY" id="uln-I7-DGh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vLL-9w-3pb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2xt-Tc-zOX"/>
+                    <connections>
+                        <outlet property="firstNumber" destination="8zO-BI-Ifd" id="LiV-s7-fyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUB-bW-Yfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786.95652173913049" y="131.91964285714286"/>
+        </scene>
+    </scenes>
+</document>
